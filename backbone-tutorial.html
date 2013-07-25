@@ -136,6 +136,8 @@
         var value = this.input.val().trim();
         if(value) {
           this.model.save({title: value});
+        } else {
+          this.input.val(this.model.get('title'));
         }
         this.$el.removeClass('editing');
       },
