@@ -134,7 +134,7 @@
       },
       close: function(){
         var value = this.input.val().trim();
-        if(value) {
+        if(value && value == this.input.val()) {
           this.model.save({title: value});
         } else {
           this.input.val(this.model.get('title'));
