@@ -210,7 +210,7 @@
       },
       setFilter: function(params) {
         console.log('app.router.params = ' + params);
-        window.filter = params.trim() || '';
+        window.filter =  (params ? params.trim() : '');
         app.todoList.trigger('reset');
       }
     });     
